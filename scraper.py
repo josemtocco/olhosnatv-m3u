@@ -53,10 +53,39 @@ def normalize_url(url: str | None, base: str) -> str | None:
     return url
 
 def clean_name(text: str) -> str:
-    text = re.sub(r"\s+", " ", text or "").strip()
-    text = re.sub(r"^(assistir|ver|ao vivo)\s+", "", text, flags=re.I)
+    text = html.unescape(str(text or ""))
+    text = re.sub(r"\s+", " ", text).strip()
+    text = re.sub(r"^(assistir|ver|ao vivo|tv online grátis)\s*[:|-]?\s*", "", text, flags=re.I)
     text = re.sub(r"\s*[-|–—]\s*(Olhos na TV.*)$", "", text, flags=re.I).strip()
     return text or "Canal sem nome"
+
+def is_generic_channel_name(name: str) -> bool:
+    n = clean_name(name).casefold()
+    return n in {"canal sem nome", "tv online grátis", "tv online gratis", "canal", "ao vivo", "assistir tv", "ver tv"} or len(n) < 2
+
+def name_from_url(url: str) -> str:
+    slug = urlparse(url).path.rsplit("/", 1)[-1].rsplit(".", 1)[0]
+    slug = re.sub(r"[-_]+", " ", slug)
+    return clean_name(slug.replace("%20", " "))
+
+def name_from_logo(url: str) -> str:
+    if not url:
+        return ""
+    path = urlparse(url).path
+    filename = path.rsplit("/", 1)[-1]
+    filename = re.sub(r"\.(?:webp|png|jpe?g|gif|svg)$", "", filename, flags=re.I)
+    filename = re.sub(r"(?:^|[-_ ])(?:logo|tv logo)$", "", filename, flags=re.I)
+    return clean_name(filename.replace("%20", " ").replace("_", " ").replace("-", " "))
+
+def best_channel_name(candidates: Iterable[str], page_url: str, logo: str = "") -> str:
+    for candidate in candidates:
+        value = clean_name(candidate)
+        if not is_generic_channel_name(value):
+            return value
+    for candidate in (name_from_logo(logo), name_from_url(page_url)):
+        if not is_generic_channel_name(candidate):
+            return candidate
+    return "Canal sem nome"
 
 def stable_id(source_page: str) -> str:
     import hashlib
@@ -191,9 +220,10 @@ class Scraper:
                 if not href or not POST_RE.search(urlparse(href).path):
                     continue
                 title = clean_name(a.get_text(" ", strip=True))
-                # Avoid taking empty/icon labels as channel names.
-                if not title or title == "Canal sem nome":
-                    title = clean_name(urlparse(href).path.rsplit("/", 1)[-1].rsplit(".", 1)[0].replace("-", " "))
+                # O template atual usa “TV Online Grátis” como texto genérico do link.
+                # Nesse caso, o slug da postagem é a fonte correta do nome.
+                if is_generic_channel_name(title):
+                    title = name_from_url(href)
                 # Find category labels near the post link when possible.
                 categories = []
                 parent = a
@@ -391,14 +421,24 @@ class Scraper:
             return None
 
         soup = BeautifulSoup(r.text, "html.parser")
-        title_node = soup.select_one("h1.post-title, h1.entry-title, h1")
-        name = clean_name(title_node.get_text(" ", strip=True) if title_node else meta["name"])
-
         logo = meta.get("logo", "")
         if not logo:
             img = soup.select_one("article img, .post img, img")
             if img:
                 logo = normalize_url(img.get("src") or img.get("data-src"), page_url) or ""
+
+        title_candidates = []
+        title_node = soup.select_one("h1.post-title, h1.entry-title, h1")
+        if title_node:
+            title_candidates.append(title_node.get_text(" ", strip=True))
+        og = soup.select_one('meta[property="og:title"], meta[name="twitter:title"]')
+        if og and og.get("content"):
+            title_candidates.append(og.get("content"))
+        for img in soup.select("article img[alt], .post img[alt], img[alt]")[:3]:
+            if img.get("alt"):
+                title_candidates.append(img.get("alt"))
+        title_candidates.append(meta.get("name", ""))
+        name = best_channel_name(title_candidates, page_url, logo)
 
         candidates = self.extract_media_urls(r.text, page_url)
         candidates += self.extract_jmv_stream(r.text)

@@ -1,5 +1,5 @@
 import unittest
-from scraper import clean_name, normalize_url, render_category_playlists, render_root_m3u
+from scraper import clean_name, normalize_url, render_category_playlists, render_root_m3u, name_from_url, best_channel_name, is_generic_channel_name
 
 class TestHelpers(unittest.TestCase):
     def test_normalize(self):
@@ -7,6 +7,11 @@ class TestHelpers(unittest.TestCase):
 
     def test_clean_name(self):
         self.assertEqual(clean_name(' Assistir SBT - Olhos na TV '), 'SBT')
+
+    def test_channel_name_fallback(self):
+        self.assertTrue(is_generic_channel_name("TV Online Grátis"))
+        self.assertEqual(name_from_url("https://www.olhosnatv.com.br/2026/09/rede-brasil.html"), "rede brasil")
+        self.assertEqual(best_channel_name(["TV Online Grátis"], "https://www.olhosnatv.com.br/2026/09/rede-brasil.html"), "rede brasil")
 
     def test_ssiptv_nested_playlists(self):
         state = {'channels': [{'id':'abc','name':'SBT','logo':'https://x/logo.png','categories':['TVs Abertas','Variedades'],'stream_url':'https://x/live.m3u8'}]}
