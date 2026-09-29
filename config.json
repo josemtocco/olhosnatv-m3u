@@ -1,14 +1,15 @@
 {
   "source_url": "https://www.olhosnatv.com.br/",
-  "categories_url": "https://www.olhosnatv.com.br/p/blog-page.html",
+  "blogger_feed": "https://www.blogger.com/feeds/6225118166347581914/posts/default",
+  "feed_page_size": 150,
+  "max_feed_pages": 40,
   "request_timeout": 20,
-  "media_timeout": 18,
-  "request_delay_seconds": 0.35,
-  "max_category_pages": 50,
-  "max_post_pages": 1000,
+  "media_timeout": 15,
+  "request_delay_seconds": 0.25,
   "max_resolve_depth": 4,
   "validate_streams": true,
-  "keep_multiple_streams_per_channel": false,
+  "max_channels": 5000,
+  "user_agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 Chrome/140 Mobile Safari/537.36",
   "allowed_media_extensions": [
     ".m3u8",
     ".mpd",
@@ -18,5 +19,5 @@
     ".aac",
     ".mp3"
   ],
-  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/140 Safari/537.36 OlhosNaTV-M3U/1.0"
+  "github_raw_base": "https://raw.githubusercontent.com/josemtocco/olhosnatv-m3u/main"
 }

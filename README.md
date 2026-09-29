@@ -1,97 +1,62 @@
 # Olhos na TV → M3U para SS IPTV
 
-Projeto para gerar automaticamente uma playlist M3U a partir dos canais publicados no [Olhos na TV](https://www.olhosnatv.com.br/).
+Versão corrigida do coletor automático.
 
-## O que faz
+## O que foi corrigido
 
-- Descobre páginas de canais automaticamente a partir do site.
-- Descobre as categorias publicadas no site e preserva os nomes delas.
-- Extrai players/streams das páginas dos canais.
-- Tenta resolver players incorporados recursivamente até encontrar URLs de mídia (`.m3u8`, `.mpd`, `.mp4`, etc.).
-- Testa os streams encontrados.
-- Gera `playlist.m3u` somente com canais atualmente utilizáveis.
-- Remove canais que deixaram de estar ativos.
-- Acrescenta canais novos automaticamente.
-- Mantém o estado em `channels.json` para detectar entradas novas/removidas e evitar duplicatas.
-- Executa automaticamente a cada 6 horas via GitHub Actions.
-- Também pode ser executado manualmente.
+- A descoberta dos canais agora usa o **feed Atom do Blogger**, em vez de depender da navegação das páginas de categorias.
+- As categorias vêm das tags/labels de cada postagem.
+- O coletor percorre várias páginas do feed para buscar todos os posts.
+- Há 3 tentativas para cada requisição HTTP.
+- O workflow **falha** quando o feed está vazio ou quando a coleta inteira falha.
+- Uma falha transitória não apaga uma playlist válida.
+- Canais antigos podem ser mantidos quando a página do canal falha temporariamente, desde que o stream antigo ainda responda.
+- Canais sem stream válido são removidos.
+- Canais novos são acrescentados.
+- Um canal em várias categorias aparece em cada categoria no M3U.
+- O workflow usa versões atuais das actions com Node.js 24 (`checkout@v5` e `setup-python@v6`).
+- Atualização automática a cada 6 horas.
 
-> **Importante:** o projeto não hospeda nem redistribui os vídeos. A playlist aponta para as URLs de mídia encontradas nas páginas públicas da fonte. Verifique os direitos de uso e as condições da fonte antes de redistribuir a playlist.
+## Instalação
 
-## Estrutura
+Substitua os arquivos do repositório por estes arquivos e faça commit/push.
 
-```text
-.
-├── .github/workflows/update.yml
-├── config.json
-├── channels.json
-├── playlist.m3u
-├── requirements.txt
-├── scraper.py
-├── test_scraper.py
-└── README.md
-```
+Depois execute:
 
-## Uso local
+**GitHub → Actions → Atualizar playlist → Run workflow**
 
-Requer Python 3.11+.
+## Playlist para SS IPTV
 
-```bash
-python -m pip install -r requirements.txt
-python scraper.py
-```
+Depois da primeira execução bem-sucedida:
 
-Para validar o projeto:
+`https://raw.githubusercontent.com/SEU_USUARIO/SEU_REPOSITORIO/main/playlist.m3u`
 
-```bash
-python -m unittest -v
-```
+No seu caso:
 
-Para forçar uma execução mais detalhada:
+`https://raw.githubusercontent.com/josemtocco/olhosnatv-m3u/main/playlist.m3u`
 
-```bash
-python scraper.py --verbose
-```
+## Diagnóstico
 
-## GitHub Actions
+No log do Actions devem aparecer mensagens semelhantes a:
 
-O workflow roda a cada 6 horas e também pode ser iniciado em **Actions → Atualizar playlist → Run workflow**.
+- `Lendo feed Blogger`
+- `Entradas acumuladas: ...`
+- `[1/... ] NOME DO CANAL`
+- `RESULTADO: descobertos=... ativos=... falhas=... novos=... removidos=...`
 
-O horário do cron é UTC. O workflow usa `0 */6 * * *`.
+Se aparecer `0 canais ativos`, o workflow será interrompido e a playlist anterior não será substituída.
 
-A cada execução ele:
+## Fonte
 
-1. baixa as categorias;
-2. percorre as páginas de canais;
-3. extrai os players/streams;
-4. valida os streams;
-5. compara com `channels.json`;
-6. remove inativos;
-7. acrescenta novos;
-8. reescreve `playlist.m3u`;
-9. faz commit somente se houver alteração.
+https://www.olhosnatv.com.br/
 
-## URL para o SS IPTV
+O projeto somente referencia streams encontrados nas páginas públicas da fonte; não hospeda os vídeos.
 
-Depois que o repositório estiver publicado, use a URL **Raw** do arquivo `playlist.m3u`, por exemplo:
 
-```text
-https://raw.githubusercontent.com/SEU_USUARIO/SEU_REPOSITORIO/main/playlist.m3u
-```
+## Formato específico para SS IPTV
 
-Substitua `SEU_USUARIO/SEU_REPOSITORIO` pelos dados do seu repositório.
+A `playlist.m3u` é a playlist raiz: ela apresenta as categorias como itens do tipo `playlist`. Cada categoria é gravada como `categoria-*.m3u` na raiz do repositório. O SS IPTV abre a categoria e então mostra os canais.
 
-## Configuração
+No SS IPTV, adicione a URL pública da `playlist.m3u` em **Settings → Content → External Playlists**. A playlist usa URLs `raw.githubusercontent.com` para as categorias.
 
-Edite `config.json` para alterar:
-
-- URL da fonte;
-- intervalo de requisições;
-- timeout;
-- número máximo de páginas;
-- profundidade de resolução de iframes;
-- extensões de mídia aceitas;
-- User-Agent;
-- comportamento de validação.
-
-O scraper foi projetado para tolerar mudanças moderadas no HTML do Blogger. Se a fonte passar a depender exclusivamente de JavaScript ou alterar radicalmente o player, pode ser necessário adaptar `extract_media_urls()`.
+O `config.json` contém `github_raw_base`; se o repositório for renomeado ou transferido, altere esse valor para a URL RAW da nova branch.
