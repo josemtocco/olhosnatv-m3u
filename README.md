@@ -65,3 +65,8 @@ O `config.json` contém `github_raw_base`; se o repositório for renomeado ou tr
 ### Correção do coletor
 
 O coletor não depende mais do endpoint legado `www.blogger.com/feeds/...`. Ele tenta o feed no próprio domínio `olhosnatv.com.br` e, se o feed estiver inválido/bloqueado, faz fallback para a paginação HTML do blog. Isso evita o erro `not well-formed (invalid token)` observado no GitHub Actions.
+
+
+### Desempenho
+
+A coleta usa até 8 workers em paralelo, cache de streams e resolução de players limitada a 2 níveis. Isso evita que iframes/links secundários façam a execução ultrapassar o limite do GitHub Actions.

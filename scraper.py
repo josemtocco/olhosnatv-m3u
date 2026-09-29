@@ -7,6 +7,7 @@ import json
 import logging
 import re
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from collections import OrderedDict
 from datetime import datetime, timezone
 from pathlib import Path
@@ -71,7 +72,9 @@ class Scraper:
             "Accept-Language": "pt-BR,pt;q=0.9,en;q=0.7",
             "Cache-Control": "no-cache",
         })
-        self.delay = float(cfg.get("request_delay_seconds", 0.25))
+        self.delay = float(cfg.get("request_delay_seconds", 0.10))
+        self.max_workers = int(cfg.get("max_workers", 8))
+        self._stream_cache = {}
 
     def get(self, url: str, timeout: int | None = None, referer: str | None = None):
         last = None
@@ -325,45 +328,56 @@ class Scraper:
             return False
 
     def resolve_candidates(self, candidates: Iterable[str], base: str) -> list[str]:
-        queue = [(u, 0, base) for u in candidates if u]
+        # Keep resolution deliberately shallow: the old implementation recursively
+        # crawled every iframe/link and could take >45 minutes on a large blog.
+        max_depth = int(self.cfg.get("max_resolve_depth", 2))
+        max_candidates = int(self.cfg.get("max_candidates_per_channel", 8))
+        queue = [(u, 0, base) for u in list(dict.fromkeys(candidates))[:max_candidates] if u]
         seen = set()
         final = []
 
-        while queue:
+        while queue and len(seen) < max_candidates * 3:
             url, depth, parent = queue.pop(0)
             if url in seen:
                 continue
             seen.add(url)
+            if url in self._stream_cache:
+                if self._stream_cache[url]:
+                    return [url]
+                continue
 
             if self.looks_like_media(url):
-                if not self.cfg.get("validate_streams", True) or self.validate_stream(url, parent):
+                ok = (not self.cfg.get("validate_streams", True) or
+                      self.validate_stream(url, parent))
+                self._stream_cache[url] = ok
+                if ok:
                     final.append(url)
                     if not self.cfg.get("keep_multiple_streams_per_channel", False):
                         return final
                 continue
 
-            if depth >= int(self.cfg.get("max_resolve_depth", 4)):
+            if depth >= max_depth:
                 continue
-
             r = self.get(url, timeout=self.cfg["media_timeout"], referer=parent)
             if not r:
                 continue
             ctype = r.headers.get("content-type", "").lower()
             if "html" not in ctype and "text" not in ctype and "javascript" not in ctype:
                 continue
-
             text = r.text
-            for media in self.extract_media_urls(text, r.url):
-                queue.append((media, depth + 1, r.url))
-            for media in self.extract_jmv_stream(text):
-                queue.append((media, depth + 1, r.url))
-
+            children = []
+            children.extend(self.extract_media_urls(text, r.url))
+            children.extend(self.extract_jmv_stream(text))
             soup = BeautifulSoup(text, "html.parser")
-            for tag in soup.find_all(["iframe", "video", "source", "a"]):
+            # Prefer iframe/video/source over arbitrary anchors. Arbitrary <a> crawling
+            # was the main source of the runaway runtime.
+            for tag in soup.find_all(["iframe", "video", "source"]):
                 for attr in ("src", "data-src", "data-url", "href"):
                     child = normalize_url(tag.get(attr), r.url)
                     if child:
-                        queue.append((child, depth + 1, r.url))
+                        children.append(child)
+            for child in list(dict.fromkeys(children))[:max_candidates]:
+                queue.append((child, depth + 1, r.url))
         return final
 
     def extract_channel(self, page_url: str, meta: dict, old: dict | None):
@@ -527,14 +541,21 @@ def main() -> int:
     discovered = []
     failures = 0
     total = len(entries)
+    LOG.info("Processando %d páginas com até %d workers", total, scraper.max_workers)
 
-    for i, (page_url, meta) in enumerate(entries.items(), 1):
-        LOG.info("[%d/%d] %s", i, total, meta["name"])
-        channel = scraper.extract_channel(page_url, meta, old_by_url.get(page_url))
-        if channel:
-            discovered.append(channel)
-        else:
-            failures += 1
+    def work(item):
+        page_url, meta = item
+        return page_url, meta, scraper.extract_channel(page_url, meta, old_by_url.get(page_url))
+
+    with ThreadPoolExecutor(max_workers=scraper.max_workers) as pool:
+        futures = [pool.submit(work, item) for item in entries.items()]
+        for i, future in enumerate(as_completed(futures), 1):
+            page_url, meta, channel = future.result()
+            LOG.info("[%d/%d] %s -> %s", i, total, meta["name"], "OK" if channel else "falhou")
+            if channel:
+                discovered.append(channel)
+            else:
+                failures += 1
 
     # Nunca apaga uma playlist inteira por falha transitória do site.
     if not discovered:

@@ -4,9 +4,9 @@
   "feed_page_size": 150,
   "max_feed_pages": 40,
   "request_timeout": 20,
-  "media_timeout": 15,
-  "request_delay_seconds": 0.25,
-  "max_resolve_depth": 4,
+  "media_timeout": 8,
+  "request_delay_seconds": 0.05,
+  "max_resolve_depth": 2,
   "validate_streams": true,
   "max_channels": 5000,
   "user_agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 Chrome/140 Mobile Safari/537.36",
@@ -19,5 +19,7 @@
     ".aac",
     ".mp3"
   ],
-  "github_raw_base": "https://raw.githubusercontent.com/josemtocco/olhosnatv-m3u/main"
+  "github_raw_base": "https://raw.githubusercontent.com/josemtocco/olhosnatv-m3u/main",
+  "max_candidates_per_channel": 6,
+  "max_workers": 8
 }
