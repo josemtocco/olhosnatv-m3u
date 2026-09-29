@@ -39,7 +39,7 @@ No seu caso:
 
 No log do Actions devem aparecer mensagens semelhantes a:
 
-- `Lendo feed Blogger`
+- `Lendo feed Blogger do próprio domínio`
 - `Entradas acumuladas: ...`
 - `[1/... ] NOME DO CANAL`
 - `RESULTADO: descobertos=... ativos=... falhas=... novos=... removidos=...`
@@ -60,3 +60,8 @@ A `playlist.m3u` é a playlist raiz: ela apresenta as categorias como itens do t
 No SS IPTV, adicione a URL pública da `playlist.m3u` em **Settings → Content → External Playlists**. A playlist usa URLs `raw.githubusercontent.com` para as categorias.
 
 O `config.json` contém `github_raw_base`; se o repositório for renomeado ou transferido, altere esse valor para a URL RAW da nova branch.
+
+
+### Correção do coletor
+
+O coletor não depende mais do endpoint legado `www.blogger.com/feeds/...`. Ele tenta o feed no próprio domínio `olhosnatv.com.br` e, se o feed estiver inválido/bloqueado, faz fallback para a paginação HTML do blog. Isso evita o erro `not well-formed (invalid token)` observado no GitHub Actions.

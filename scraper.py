@@ -13,7 +13,6 @@ from pathlib import Path
 from typing import Iterable
 from urllib.parse import urljoin, urlparse
 
-import feedparser
 import requests
 from bs4 import BeautifulSoup
 
@@ -97,72 +96,166 @@ class Scraper:
         return None
 
     def discover_feed_entries(self) -> OrderedDict[str, dict]:
-        base = self.cfg["blogger_feed"]
+        """Discover Blogger posts without depending on the legacy blogger.com feed.
+
+        Blogger's global /feeds/<blog-id>/posts/default endpoint can return HTML or
+        malformed content in some environments. The source-domain feed is tried first;
+        if it is unavailable/malformed, we fall back to the blog's normal HTML pages
+        and follow Blogger's "Older Posts" pagination.
+        """
         result: OrderedDict[str, dict] = {}
         page_size = int(self.cfg.get("feed_page_size", 150))
         max_pages = int(self.cfg.get("max_feed_pages", 40))
+        source = self.cfg["source_url"].rstrip("/") + "/"
 
+        # 1) Native feed on the source domain. This is the current Blogger-supported
+        # form and avoids the legacy blogger.com global feed endpoint.
+        feed_urls = [
+            f"{source}feeds/posts/default?alt=json&max-results={page_size}",
+            f"{source}feeds/posts/default?alt=atom&max-results={page_size}",
+        ]
+        feed_ok = False
+        for feed_url in feed_urls:
+            LOG.info("Tentando feed do domínio: %s", feed_url)
+            r = self.get(feed_url)
+            if not r:
+                continue
+            ctype = (r.headers.get("content-type") or "").lower()
+            body = r.content.lstrip()
+            # JSON feed: parse directly so malformed XML cannot break the run.
+            if "json" in ctype or body.startswith(b"{"):
+                try:
+                    data = r.json()
+                    entries = data.get("feed", {}).get("entry", [])
+                    for entry in entries:
+                        link = next((x.get("href") for x in entry.get("link", [])
+                                     if x.get("rel") == "alternate" and x.get("href")), None)
+                        self._add_feed_entry(result, entry, link)
+                    LOG.info("Feed JSON: %d entradas", len(result))
+                    if result:
+                        feed_ok = True
+                        break
+                except (ValueError, TypeError, AttributeError) as exc:
+                    LOG.warning("Feed JSON inválido: %s", exc)
+            # Atom XML: use BeautifulSoup XML parsing instead of feedparser so a
+            # broken/HTML response is simply rejected and HTML fallback is used.
+            elif "xml" in ctype or body.startswith(b"<?xml") or body.startswith(b"<feed"):
+                try:
+                    soup = BeautifulSoup(r.content, "xml")
+                    entries = soup.find_all("entry")
+                    for entry in entries:
+                        link_tag = entry.find("link", attrs={"rel": "alternate"}) or entry.find("link")
+                        link = link_tag.get("href") if link_tag else None
+                        categories = [t.get("term", "") for t in entry.find_all("category")]
+                        self._add_feed_entry(result, {
+                            "title": {"$t": entry.find("title").get_text(" ", strip=True) if entry.find("title") else "Canal"},
+                            "link": [{"rel": "alternate", "href": link}] if link else [],
+                            "category": [{"term": x} for x in categories],
+                            "content": {"$t": entry.find("content").get_text() if entry.find("content") else ""},
+                            "summary": {"$t": entry.find("summary").get_text() if entry.find("summary") else ""},
+                        }, link)
+                    LOG.info("Feed Atom: %d entradas", len(result))
+                    if result:
+                        feed_ok = True
+                        break
+                except Exception as exc:
+                    LOG.warning("Feed XML inválido: %s", exc)
+
+        if feed_ok:
+            return result
+
+        # 2) Robust fallback: crawl Blogger HTML pagination. This works even when
+        # the feed endpoint is blocked or malformed.
+        LOG.warning("Feed indisponível; usando paginação HTML do blog.")
+        next_url = source
+        visited = set()
         for page in range(max_pages):
-            start = page * page_size + 1
-            url = f"{base}?alt=json&max-results={page_size}&start-index={start}"
-            LOG.info("Lendo feed Blogger: página %d", page + 1)
-            try:
-                feed = feedparser.parse(url)
-            except Exception as exc:
-                raise RuntimeError(f"Falha ao ler feed Blogger: {exc}") from exc
-
-            if getattr(feed, "bozo", False) and not feed.entries:
-                raise RuntimeError(f"Feed Blogger inacessível ou inválido: {getattr(feed, 'bozo_exception', '')}")
-
-            entries = feed.entries or []
-            if not entries:
+            if not next_url or next_url in visited:
                 break
-
-            for entry in entries:
-                link = entry.get("link")
-                if not link:
-                    for link_obj in entry.get("links", []):
-                        if link_obj.get("rel") == "alternate" and link_obj.get("href"):
-                            link = link_obj["href"]
-                            break
-                link = normalize_url(link, self.cfg["source_url"])
-                if not link or not POST_RE.search(urlparse(link).path):
+            visited.add(next_url)
+            LOG.info("Lendo página HTML do blog: %d", page + 1)
+            r = self.get(next_url)
+            if not r:
+                if page == 0:
+                    raise RuntimeError("Não foi possível acessar o site Olhos na TV.")
+                break
+            soup = BeautifulSoup(r.text, "html.parser")
+            found_before = len(result)
+            # Blogger post containers vary by template; collecting all links matching
+            # /YYYY/MM/slug.html is more stable than relying on CSS class names.
+            for a in soup.find_all("a", href=True):
+                href = normalize_url(a.get("href"), next_url)
+                if not href or not POST_RE.search(urlparse(href).path):
                     continue
-
+                title = clean_name(a.get_text(" ", strip=True))
+                # Avoid taking empty/icon labels as channel names.
+                if not title or title == "Canal sem nome":
+                    title = clean_name(urlparse(href).path.rsplit("/", 1)[-1].rsplit(".", 1)[0].replace("-", " "))
+                # Find category labels near the post link when possible.
                 categories = []
-                for tag in entry.get("tags", []):
-                    term = clean_name(tag.get("term", ""))
-                    if term and term.upper() not in {"BLOG", "UNCATEGORIZED"}:
-                        categories.append(term)
-                # Fallback: algumas entradas antigas não trazem tags no feed.
-                categories = sorted(set(categories), key=str.casefold)
-
-                content = ""
-                if entry.get("content"):
-                    content = entry["content"][0].get("value", "")
-                if not content:
-                    content = entry.get("summary", "")
-
-                title = clean_name(entry.get("title", "Canal"))
-                logo = ""
-                soup = BeautifulSoup(content, "html.parser")
-                img = soup.find("img")
-                if img:
-                    logo = normalize_url(img.get("src") or img.get("data-src"), link) or ""
-
-                result[link.split("#", 1)[0]] = {
+                parent = a
+                for _ in range(4):
+                    parent = getattr(parent, "parent", None)
+                    if not parent:
+                        break
+                    for ca in parent.find_all("a", href=True):
+                        txt = clean_name(ca.get_text(" ", strip=True))
+                        chref = ca.get("href", "")
+                        if txt and "/search/label/" in chref:
+                            categories.append(txt)
+                result[href.split("#", 1)[0]] = {
                     "name": title,
-                    "categories": categories,
-                    "logo": logo,
+                    "categories": sorted(set(categories), key=str.casefold),
+                    "logo": "",
                 }
 
-            LOG.info("Entradas acumuladas: %d", len(result))
-            if len(entries) < page_size:
+            LOG.info("Posts encontrados nesta página: +%d (total %d)", len(result) - found_before, len(result))
+            # Find Blogger's older-post pagination link.
+            candidates = []
+            for a in soup.find_all("a", href=True):
+                txt = clean_name(a.get_text(" ", strip=True)).casefold()
+                href = normalize_url(a.get("href"), next_url)
+                if not href:
+                    continue
+                if ("older posts" in txt or "postagens mais antigas" in txt or
+                    "mais antigas" in txt or "older" == txt):
+                    candidates.append(href)
+                elif "updated-max=" in href and "max-results=" in href:
+                    candidates.append(href)
+            next_url = next((u for u in candidates if u not in visited), None)
+            if not next_url:
                 break
 
         if not result:
-            raise RuntimeError("O feed foi acessado, mas nenhum post de canal foi encontrado.")
+            raise RuntimeError("O site foi acessado, mas nenhuma postagem de canal foi encontrada.")
         return result
+
+    def _add_feed_entry(self, result: OrderedDict[str, dict], entry: dict, link: str | None) -> None:
+        link = normalize_url(link, self.cfg["source_url"])
+        if not link or not POST_RE.search(urlparse(link).path):
+            return
+        def val(obj, key, default=""):
+            x = obj.get(key, default) if isinstance(obj, dict) else default
+            if isinstance(x, dict):
+                return x.get("$t", default)
+            return x
+        title = clean_name(val(entry, "title", "Canal"))
+        tags = entry.get("tags") or entry.get("category") or []
+        categories = []
+        for tag in tags:
+            term = tag.get("term", "") if isinstance(tag, dict) else ""
+            term = clean_name(term)
+            if term and term.upper() not in {"BLOG", "UNCATEGORIZED"}:
+                categories.append(term)
+        content = val(entry, "content", "") or val(entry, "summary", "")
+        soup = BeautifulSoup(content, "html.parser")
+        img = soup.find("img")
+        logo = normalize_url(img.get("src") or img.get("data-src"), link) if img else ""
+        result[link.split("#", 1)[0]] = {
+            "name": title,
+            "categories": sorted(set(categories), key=str.casefold),
+            "logo": logo or "",
+        }
 
     def extract_media_urls(self, text: str, base: str) -> list[str]:
         text = html.unescape(text or "")
