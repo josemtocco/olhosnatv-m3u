@@ -1,159 +1,97 @@
-# Olhos na TV → M3U automática
+# Olhos na TV → M3U para SS IPTV
 
-Projeto para construir e atualizar uma playlist M3U a partir dos canais públicos listados em
-[Olhos na TV](https://www.olhosnatv.com.br/).
+Projeto para gerar automaticamente uma playlist M3U a partir dos canais publicados no [Olhos na TV](https://www.olhosnatv.com.br/).
 
-A playlist final é gerada no diretório raiz:
+## O que faz
 
-```text
-lista.m3u
-```
+- Descobre páginas de canais automaticamente a partir do site.
+- Descobre as categorias publicadas no site e preserva os nomes delas.
+- Extrai players/streams das páginas dos canais.
+- Tenta resolver players incorporados recursivamente até encontrar URLs de mídia (`.m3u8`, `.mpd`, `.mp4`, etc.).
+- Testa os streams encontrados.
+- Gera `playlist.m3u` somente com canais atualmente utilizáveis.
+- Remove canais que deixaram de estar ativos.
+- Acrescenta canais novos automaticamente.
+- Mantém o estado em `channels.json` para detectar entradas novas/removidas e evitar duplicatas.
+- Executa automaticamente a cada 6 horas via GitHub Actions.
+- Também pode ser executado manualmente.
 
-## Como funciona
-
-A cada execução o programa:
-
-1. acessa a página principal;
-2. encontra as páginas de canais;
-3. visita cada página;
-4. procura URLs de players/streams;
-5. mantém somente entradas com URL utilizável;
-6. remove duplicidades;
-7. preserva canais descobertos anteriormente quando ainda estão disponíveis;
-8. grava `lista.m3u` atomicamente.
-
-O GitHub Actions executa o processo a cada 6 horas e, quando houver alteração, faz commit
-da nova `lista.m3u`.
-
-> Observação: o site pode alterar a estrutura HTML, os players ou os mecanismos de transmissão.
-> O extrator foi feito para ser tolerante a diferentes formatos, mas nenhuma rotina de scraping
-> consegue garantir compatibilidade permanente sem ajustes quando a fonte muda.
+> **Importante:** o projeto não hospeda nem redistribui os vídeos. A playlist aponta para as URLs de mídia encontradas nas páginas públicas da fonte. Verifique os direitos de uso e as condições da fonte antes de redistribuir a playlist.
 
 ## Estrutura
 
 ```text
 .
-├── atualizar.py
-├── canais.json
-├── lista.m3u
+├── .github/workflows/update.yml
+├── config.json
+├── channels.json
+├── playlist.m3u
 ├── requirements.txt
-├── README.md
-├── .gitignore
-└── .github/
-    └── workflows/
-        └── atualizar.yml
+├── scraper.py
+├── test_scraper.py
+└── README.md
 ```
 
-## Rodar localmente
+## Uso local
 
 Requer Python 3.11+.
 
 ```bash
-python -m venv .venv
+python -m pip install -r requirements.txt
+python scraper.py
 ```
 
-Linux/macOS:
+Para validar o projeto:
 
 ```bash
-source .venv/bin/activate
+python -m unittest -v
 ```
 
-Windows PowerShell:
-
-```powershell
-.venv\Scripts\Activate.ps1
-```
-
-Instale:
+Para forçar uma execução mais detalhada:
 
 ```bash
-pip install -r requirements.txt
-```
-
-Execute:
-
-```bash
-python atualizar.py
-```
-
-A saída será:
-
-```text
-lista.m3u
-```
-
-## Configuração
-
-As variáveis de ambiente opcionais são:
-
-```text
-SOURCE_URL=https://www.olhosnatv.com.br/
-OUTPUT_FILE=lista.m3u
-STATE_FILE=canais.json
-REQUEST_TIMEOUT=20
-MAX_WORKERS=8
-CHECK_STREAMS=false
-```
-
-Por padrão, `CHECK_STREAMS=false`, porque verificar cada stream com uma requisição HTTP pode
-ser lento e alguns servidores bloqueiam HEAD/GET automáticos.
-
-Para habilitar uma verificação simples:
-
-```bash
-CHECK_STREAMS=true python atualizar.py
+python scraper.py --verbose
 ```
 
 ## GitHub Actions
 
-O workflow `.github/workflows/atualizar.yml` possui:
+O workflow roda a cada 6 horas e também pode ser iniciado em **Actions → Atualizar playlist → Run workflow**.
 
-```yaml
-schedule:
-  - cron: "17 */6 * * *"
-```
+O horário do cron é UTC. O workflow usa `0 */6 * * *`.
 
-O `17` é proposital: evita rodar exatamente na virada da hora junto com muitos outros workflows.
+A cada execução ele:
 
-O GitHub Actions usa UTC. Portanto, os horários locais podem variar conforme horário de verão.
+1. baixa as categorias;
+2. percorre as páginas de canais;
+3. extrai os players/streams;
+4. valida os streams;
+5. compara com `channels.json`;
+6. remove inativos;
+7. acrescenta novos;
+8. reescreve `playlist.m3u`;
+9. faz commit somente se houver alteração.
 
-Também é possível executar manualmente em:
+## URL para o SS IPTV
 
-**GitHub → Actions → Atualizar playlist M3U → Run workflow**
-
-### Permissão necessária
-
-Em:
-
-**Settings → Actions → General → Workflow permissions**
-
-deixe habilitada a opção para o workflow poder escrever no repositório
-(`Read and write permissions`).
-
-O workflow também declara:
-
-```yaml
-permissions:
-  contents: write
-```
-
-## Publicar a playlist
-
-Depois que o Actions fizer o primeiro commit, a playlist estará no endereço bruto do arquivo
-do seu próprio repositório. No README do GitHub, você pode usar o endereço `raw.githubusercontent.com`
-correspondente ao seu usuário, repositório e branch.
-
-Exemplo de formato:
+Depois que o repositório estiver publicado, use a URL **Raw** do arquivo `playlist.m3u`, por exemplo:
 
 ```text
-https://raw.githubusercontent.com/SEU_USUARIO/SEU_REPOSITORIO/main/lista.m3u
+https://raw.githubusercontent.com/SEU_USUARIO/SEU_REPOSITORIO/main/playlist.m3u
 ```
 
-## Importante
+Substitua `SEU_USUARIO/SEU_REPOSITORIO` pelos dados do seu repositório.
 
-Use somente canais e transmissões que você esteja autorizado a acessar e redistribuir. O projeto
-não fornece conteúdo de TV por conta própria; ele apenas coleta referências públicas encontradas
-na fonte configurada.
+## Configuração
 
-Se o site mudar sua estrutura, consulte os logs da Action para identificar qual etapa deixou de
-encontrar os links.
+Edite `config.json` para alterar:
+
+- URL da fonte;
+- intervalo de requisições;
+- timeout;
+- número máximo de páginas;
+- profundidade de resolução de iframes;
+- extensões de mídia aceitas;
+- User-Agent;
+- comportamento de validação.
+
+O scraper foi projetado para tolerar mudanças moderadas no HTML do Blogger. Se a fonte passar a depender exclusivamente de JavaScript ou alterar radicalmente o player, pode ser necessário adaptar `extract_media_urls()`.

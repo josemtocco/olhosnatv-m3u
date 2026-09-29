@@ -1,0 +1,22 @@
+{
+  "source_url": "https://www.olhosnatv.com.br/",
+  "categories_url": "https://www.olhosnatv.com.br/p/blog-page.html",
+  "request_timeout": 20,
+  "media_timeout": 18,
+  "request_delay_seconds": 0.35,
+  "max_category_pages": 50,
+  "max_post_pages": 1000,
+  "max_resolve_depth": 4,
+  "validate_streams": true,
+  "keep_multiple_streams_per_channel": false,
+  "allowed_media_extensions": [
+    ".m3u8",
+    ".mpd",
+    ".mp4",
+    ".m4v",
+    ".ts",
+    ".aac",
+    ".mp3"
+  ],
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/140 Safari/537.36 OlhosNaTV-M3U/1.0"
+}
