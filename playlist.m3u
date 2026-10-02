@@ -5,6 +5,9 @@ https://raw.githubusercontent.com/josemtocco/olhosnatv-m3u/main/categoria-agrone
 #EXTINF:0 type="playlist" tvg-name="Animes",Animes
 #EXTSIZE:medium
 https://raw.githubusercontent.com/josemtocco/olhosnatv-m3u/main/categoria-animes.m3u
+#EXTINF:0 type="playlist" tvg-name="Católicos",Católicos
+#EXTSIZE:medium
+https://raw.githubusercontent.com/josemtocco/olhosnatv-m3u/main/categoria-catolicos.m3u
 #EXTINF:0 type="playlist" tvg-name="Clássicos",Clássicos
 #EXTSIZE:medium
 https://raw.githubusercontent.com/josemtocco/olhosnatv-m3u/main/categoria-classicos.m3u
