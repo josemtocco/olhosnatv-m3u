@@ -35,6 +35,9 @@ https://raw.githubusercontent.com/josemtocco/olhosnatv-m3u/main/categoria-filmes
 #EXTINF:0 type="playlist" tvg-name="Filmes",Filmes
 #EXTSIZE:medium
 https://raw.githubusercontent.com/josemtocco/olhosnatv-m3u/main/categoria-filmes.m3u
+#EXTINF:0 type="playlist" tvg-name="Kids",Kids
+#EXTSIZE:medium
+https://raw.githubusercontent.com/josemtocco/olhosnatv-m3u/main/categoria-kids.m3u
 #EXTINF:0 type="playlist" tvg-name="Músicas",Músicas
 #EXTSIZE:medium
 https://raw.githubusercontent.com/josemtocco/olhosnatv-m3u/main/categoria-musicas.m3u
