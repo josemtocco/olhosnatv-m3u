@@ -47,9 +47,6 @@ https://raw.githubusercontent.com/josemtocco/olhosnatv-m3u/main/categoria-notici
 #EXTINF:0 type="playlist" tvg-name="Novelas",Novelas
 #EXTSIZE:medium
 https://raw.githubusercontent.com/josemtocco/olhosnatv-m3u/main/categoria-novelas.m3u
-#EXTINF:0 type="playlist" tvg-name="Pegadinhas",Pegadinhas
-#EXTSIZE:medium
-https://raw.githubusercontent.com/josemtocco/olhosnatv-m3u/main/categoria-pegadinhas.m3u
 #EXTINF:0 type="playlist" tvg-name="Seriados",Seriados
 #EXTSIZE:medium
 https://raw.githubusercontent.com/josemtocco/olhosnatv-m3u/main/categoria-seriados.m3u
