@@ -1,7 +1,7 @@
 {
   "version": 2,
   "source": "https://www.olhosnatv.com.br/",
-  "updated_at": "2026-11-03T13:51:12.870951+00:00",
+  "updated_at": "2026-11-03T23:02:35.096545+00:00",
   "channels": [
     {
       "id": "ec1ec7d3e7c31626",
@@ -13,7 +13,7 @@
       "source_page": "https://www.olhosnatv.com.br/2018/05/tv-coop-sc.html",
       "stream_url": "https://stream01f.netpointcdn.com.br/tvcoopsc/aovivo/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:47:37.968832+00:00"
+      "last_seen": "2026-11-03T22:59:16.340371+00:00"
     },
     {
       "id": "8c587cb0c1c7f011",
@@ -25,7 +25,7 @@
       "source_page": "https://www.olhosnatv.com.br/2020/09/anime-tv.html",
       "stream_url": "https://stmv2.painelvideocast.com.br/animetv/animetv/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:48:42.359126+00:00"
+      "last_seen": "2026-11-03T23:00:43.516152+00:00"
     },
     {
       "id": "f9ac7c75499778b6",
@@ -38,7 +38,7 @@
       "source_page": "https://www.olhosnatv.com.br/2022/12/geekdot.html",
       "stream_url": "https://stream.ichibansys.com:3764/hybrid/play.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:48:35.783581+00:00"
+      "last_seen": "2026-11-03T23:00:29.088421+00:00"
     },
     {
       "id": "5cd4dbf5293c4175",
@@ -52,7 +52,7 @@
       "source_page": "https://www.olhosnatv.com.br/2025/10/kanade.html",
       "stream_url": "https://static.kanade.cl/hls/kanade.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:49:36.742840+00:00"
+      "last_seen": "2026-11-03T23:01:18.241237+00:00"
     },
     {
       "id": "6562aa755a122746",
@@ -66,7 +66,7 @@
       "source_page": "https://www.olhosnatv.com.br/2022/02/loading-tv.html",
       "stream_url": "https://stmv1.srvif.com/loadingtv/loadingtv/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:48:04.203035+00:00"
+      "last_seen": "2026-11-03T22:59:18.825837+00:00"
     },
     {
       "id": "b1de0b4f62b35cbf",
@@ -78,7 +78,7 @@
       "source_page": "https://www.olhosnatv.com.br/2022/10/otaku-sign-tv.html",
       "stream_url": "https://stmv1.srvif.com/anime/anime/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:47:22.569334+00:00"
+      "last_seen": "2026-11-03T22:59:13.338623+00:00"
     },
     {
       "id": "ea35317afcdcf0a1",
@@ -93,7 +93,7 @@
       "source_page": "https://www.olhosnatv.com.br/2025/10/web-tv-cr.html",
       "stream_url": "https://stmv1.paineldevideo.com.br/clagpl2/clagpl2/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:48:01.719623+00:00"
+      "last_seen": "2026-11-03T22:59:19.232254+00:00"
     },
     {
       "id": "9af1ee38ec440572",
@@ -107,7 +107,7 @@
       "source_page": "https://www.olhosnatv.com.br/2020/03/wording-tv.html",
       "stream_url": "https://tv02.zas.media:1936/wordingtv/wordingtv/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:47:40.862658+00:00"
+      "last_seen": "2026-11-03T22:59:18.216517+00:00"
     },
     {
       "id": "e9779141c849cc48",
@@ -120,7 +120,7 @@
       "source_page": "https://www.olhosnatv.com.br/2018/05/rede-seculo-21.html",
       "stream_url": "https://cdn.live.br1.jmvstream.com/w/LVW-19954/LVW19954_V2nXt9iI2m/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:50:08.829453+00:00"
+      "last_seen": "2026-11-03T23:01:38.207298+00:00"
     },
     {
       "id": "ecb740c869c72505",
@@ -133,7 +133,7 @@
       "source_page": "https://www.olhosnatv.com.br/2018/05/tv-aparecida.html",
       "stream_url": "https://cdn.live.br1.jmvstream.com/w/LVW-9716/LVW9716_HbtQtezcaw/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:50:10.383873+00:00"
+      "last_seen": "2026-11-03T23:01:30.269138+00:00"
     },
     {
       "id": "5ea842a78d9a5781",
@@ -146,7 +146,7 @@
       "source_page": "https://www.olhosnatv.com.br/2024/02/1980-channel.html",
       "stream_url": "https://stmv2.painelvideocast.com.br/channel80/channel80/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:47:08.998500+00:00"
+      "last_seen": "2026-11-03T22:59:08.915740+00:00"
     },
     {
       "id": "dfaa6b12ccdd1eaa",
@@ -160,7 +160,7 @@
       "source_page": "https://www.olhosnatv.com.br/2021/10/awtv.html",
       "stream_url": "https://awtv.nuvemplay.live/hls/stream.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:46:51.987924+00:00"
+      "last_seen": "2026-11-03T22:59:03.821018+00:00"
     },
     {
       "id": "d8f30437054c8f05",
@@ -174,7 +174,7 @@
       "source_page": "https://www.olhosnatv.com.br/2024/06/bs-tv-online.html",
       "stream_url": "https://video05.logicahost.com.br/gbsstudio/gbsstudio/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:46:54.314210+00:00"
+      "last_seen": "2026-11-03T22:59:05.585275+00:00"
     },
     {
       "id": "2b9d8edd6b953139",
@@ -189,7 +189,7 @@
       "source_page": "https://www.olhosnatv.com.br/2020/10/bs-tv.html",
       "stream_url": "https://br5093.streamingdevideo.com.br/bstv/bstv/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:48:40.354170+00:00"
+      "last_seen": "2026-11-03T23:00:40.823653+00:00"
     },
     {
       "id": "149075be94e51962",
@@ -203,7 +203,7 @@
       "source_page": "https://www.olhosnatv.com.br/2023/10/caravana-play.html",
       "stream_url": "https://stmv2.voxtvhd.com.br/keynni6990/keynni6990/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:46:51.463651+00:00"
+      "last_seen": "2026-11-03T22:59:02.528278+00:00"
     },
     {
       "id": "8b662d17bc68930a",
@@ -216,7 +216,7 @@
       "source_page": "https://www.olhosnatv.com.br/2022/08/channel-1.html",
       "stream_url": "https://stmv2.painelvideocast.com.br/movies1/movies1/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:46:55.562724+00:00"
+      "last_seen": "2026-11-03T22:59:07.626905+00:00"
     },
     {
       "id": "0d2443640a7ab4bc",
@@ -229,7 +229,7 @@
       "source_page": "https://www.olhosnatv.com.br/2025/02/cine-brasil.html",
       "stream_url": "https://stmv2.painelvideocast.com.br/cinebrasil/cinebrasil/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:47:52.166410+00:00"
+      "last_seen": "2026-11-03T22:59:17.925065+00:00"
     },
     {
       "id": "9718f5bb8f4113ad",
@@ -242,7 +242,7 @@
       "source_page": "https://www.olhosnatv.com.br/2025/12/cine-catastrofe.html",
       "stream_url": "https://video05.logicahost.com.br/cinecatastrofe/cinecatastrofe/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:46:56.834243+00:00"
+      "last_seen": "2026-11-03T22:59:09.618465+00:00"
     },
     {
       "id": "be027108258bf201",
@@ -255,7 +255,7 @@
       "source_page": "https://www.olhosnatv.com.br/2018/06/classique-tv.html",
       "stream_url": "https://stmv1.srvif.com/classique/classique/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:47:56.921757+00:00"
+      "last_seen": "2026-11-03T22:59:20.838388+00:00"
     },
     {
       "id": "3403a45c2d043404",
@@ -268,7 +268,7 @@
       "source_page": "https://www.olhosnatv.com.br/2020/04/classique-tv-series.html",
       "stream_url": "https://stmv1.srvif.com/tvserie/tvserie/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:46:55.470351+00:00"
+      "last_seen": "2026-11-03T22:59:07.409304+00:00"
     },
     {
       "id": "276c02876ffbe771",
@@ -282,7 +282,7 @@
       "source_page": "https://www.olhosnatv.com.br/2025/12/classique-tv-western.html",
       "stream_url": "https://stmv2.painelvideocast.com.br/classiquew/classiquew/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:48:35.226191+00:00"
+      "last_seen": "2026-11-03T23:00:29.969100+00:00"
     },
     {
       "id": "2f4b4c43ed98f789",
@@ -296,7 +296,7 @@
       "source_page": "https://www.olhosnatv.com.br/2020/05/rede-clone-tv.html",
       "stream_url": "https://video04.logicahost.com.br/cloudingtv/cloudingtv/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:46:52.630674+00:00"
+      "last_seen": "2026-11-03T22:59:03.804593+00:00"
     },
     {
       "id": "d0e993437bb3d249",
@@ -309,7 +309,7 @@
       "source_page": "https://www.olhosnatv.com.br/2026/05/comedy-club.html",
       "stream_url": "https://video11.logicahost.com.br/comedyclub/comedyclub/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:48:41.499152+00:00"
+      "last_seen": "2026-11-03T23:00:42.831886+00:00"
     },
     {
       "id": "a602f58445aeb9cf",
@@ -324,7 +324,7 @@
       "source_page": "https://www.olhosnatv.com.br/2025/02/conexao-tv.html",
       "stream_url": "https://pop.uniquetv.com.br/tvconexao/video.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:48:42.591329+00:00"
+      "last_seen": "2026-11-03T23:00:50.085043+00:00"
     },
     {
       "id": "562e27fed8305d40",
@@ -338,7 +338,7 @@
       "source_page": "https://www.olhosnatv.com.br/2023/02/grjngo.html",
       "stream_url": "https://amogonetworx-grjngo-1-eu.plex.wurl.tv/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:48:29.672042+00:00"
+      "last_seen": "2026-11-03T22:59:26.120342+00:00"
     },
     {
       "id": "afa534a380aa194b",
@@ -352,7 +352,7 @@
       "source_page": "https://www.olhosnatv.com.br/2022/01/grjngo.html",
       "stream_url": "https://amogonetworx-grjngo-2-eu.plex.wurl.tv/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:50:34.206131+00:00"
+      "last_seen": "2026-11-03T23:01:36.507326+00:00"
     },
     {
       "id": "496041f115c6a8d3",
@@ -368,7 +368,7 @@
       "source_page": "https://www.olhosnatv.com.br/2018/05/istv.html",
       "stream_url": "https://video10.logicahost.com.br/redeistv/redeistv/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:46:52.768012+00:00"
+      "last_seen": "2026-11-03T22:59:04.162518+00:00"
     },
     {
       "id": "d5019f5fc0011a48",
@@ -381,7 +381,7 @@
       "source_page": "https://www.olhosnatv.com.br/2020/11/jetsons-tv.html",
       "stream_url": "https://stmv1.srvif.com/jetsontv/jetsontv/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:48:45.119442+00:00"
+      "last_seen": "2026-11-03T23:00:56.085412+00:00"
     },
     {
       "id": "54cc77a883c17ed2",
@@ -395,7 +395,7 @@
       "source_page": "https://www.olhosnatv.com.br/2025/02/liberdade-radio-e-tv.html",
       "stream_url": "https://stmv1.paineldevideo.com.br/liberdaderadioetv/liberdaderadioetv/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:50:15.015338+00:00"
+      "last_seen": "2026-11-03T23:01:37.104264+00:00"
     },
     {
       "id": "cbaa9186ee5af616",
@@ -411,7 +411,7 @@
       "source_page": "https://www.olhosnatv.com.br/2022/03/lucas-tv.html",
       "stream_url": "https://stmv1.srvif.com/lucastv/lucastv/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:47:08.956670+00:00"
+      "last_seen": "2026-11-03T22:59:10.520947+00:00"
     },
     {
       "id": "844e8332ff9ed127",
@@ -426,7 +426,7 @@
       "source_page": "https://www.olhosnatv.com.br/2025/06/multicanais.html",
       "stream_url": "https://stmv2.painelvideocast.com.br/multicanais/multicanais/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:48:15.600524+00:00"
+      "last_seen": "2026-11-03T22:59:22.790110+00:00"
     },
     {
       "id": "15103546bd42992f",
@@ -440,7 +440,7 @@
       "source_page": "https://www.olhosnatv.com.br/2020/01/now-80s.html",
       "stream_url": "https://lightning-now80s-samsungnz.amagi.tv/playlist720p.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:49:06.086098+00:00"
+      "last_seen": "2026-11-03T23:01:12.419924+00:00"
     },
     {
       "id": "6e3926465143c151",
@@ -453,7 +453,7 @@
       "source_page": "https://www.olhosnatv.com.br/2026/05/os-detetives.html",
       "stream_url": "https://video11.logicahost.com.br/detetives/detetives/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:47:39.639129+00:00"
+      "last_seen": "2026-11-03T22:59:16.478464+00:00"
     },
     {
       "id": "2204f01e9e2b9c9f",
@@ -468,7 +468,7 @@
       "source_page": "https://www.olhosnatv.com.br/2025/06/rbtv.html",
       "stream_url": "https://redebrasileira.nuvemplay.live/hls/stream.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:48:09.735775+00:00"
+      "last_seen": "2026-11-03T22:59:21.629876+00:00"
     },
     {
       "id": "54b1c95857361a2c",
@@ -484,7 +484,7 @@
       "source_page": "https://www.olhosnatv.com.br/2024/10/rede-brasil-rbtv.html",
       "stream_url": "https://redebrasil.nuvemplay.live/hls/stream.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:46:51.530793+00:00"
+      "last_seen": "2026-11-03T22:59:02.224085+00:00"
     },
     {
       "id": "78ffac1439ffb3d5",
@@ -500,7 +500,7 @@
       "source_page": "https://www.olhosnatv.com.br/2020/01/ngt.html",
       "stream_url": "https://isaocorp.cloudecast.com/ngt/index.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:47:26.426939+00:00"
+      "last_seen": "2026-11-03T22:59:15.971499+00:00"
     },
     {
       "id": "c5f18db457ddf8bb",
@@ -514,7 +514,7 @@
       "source_page": "https://www.olhosnatv.com.br/2018/05/rede-tv-mais.html",
       "stream_url": "https://video09.logicahost.com.br/redetvmais/redetvmais/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:48:06.808507+00:00"
+      "last_seen": "2026-11-03T22:59:20.792136+00:00"
     },
     {
       "id": "21d2195367f9f108",
@@ -529,7 +529,7 @@
       "source_page": "https://www.olhosnatv.com.br/2018/05/rede-utv.html",
       "stream_url": "https://utvsite.acessaradios.com.br/utvsite/utvsite.stream/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:47:53.931995+00:00"
+      "last_seen": "2026-11-03T22:59:20.122315+00:00"
     },
     {
       "id": "1ee9509d19cf4430",
@@ -542,7 +542,7 @@
       "source_page": "https://www.olhosnatv.com.br/2018/05/retro-cartoon-desenhos-classicos.html",
       "stream_url": "https://stmv1.video.brstream.com.br/retrotv/retrotv/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:46:55.023293+00:00"
+      "last_seen": "2026-11-03T22:59:06.680135+00:00"
     },
     {
       "id": "fb64115f4dd8971c",
@@ -557,7 +557,7 @@
       "source_page": "https://www.olhosnatv.com.br/2019/06/reviva-tv.html",
       "stream_url": "https://stmv.webtvninjas.com.br/webtvni1/webtvni1/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:46:55.312566+00:00"
+      "last_seen": "2026-11-03T22:59:12.335390+00:00"
     },
     {
       "id": "5fcd1c16f84f7b0d",
@@ -572,7 +572,7 @@
       "source_page": "https://www.olhosnatv.com.br/2020/02/seven-tv.html",
       "stream_url": "https://stmv1.srvif.com/seventv/seventv/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:48:43.044968+00:00"
+      "last_seen": "2026-11-03T23:00:53.375144+00:00"
     },
     {
       "id": "02239c102ea898ae",
@@ -587,7 +587,7 @@
       "source_page": "https://www.olhosnatv.com.br/2025/07/swt.html",
       "stream_url": "https://srv2.zcast.com.br/edgard4915/edgard4915/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:46:52.971086+00:00"
+      "last_seen": "2026-11-03T22:59:04.728850+00:00"
     },
     {
       "id": "de9a936d8eac3968",
@@ -600,7 +600,7 @@
       "source_page": "https://www.olhosnatv.com.br/2023/08/series-classic.html",
       "stream_url": "https://video10.logicahost.com.br/serieclassic/serieclassic/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:46:55.793728+00:00"
+      "last_seen": "2026-11-03T22:59:05.460053+00:00"
     },
     {
       "id": "50793aeb3768b5a6",
@@ -615,7 +615,7 @@
       "source_page": "https://www.olhosnatv.com.br/2023/06/tela-brasil-tv.html",
       "stream_url": "https://stmv.webtvninjas.com.br/mailson6054/mailson6054/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:47:09.981145+00:00"
+      "last_seen": "2026-11-03T22:59:11.732260+00:00"
     },
     {
       "id": "2aa3935492a6ccf6",
@@ -630,7 +630,7 @@
       "source_page": "https://www.olhosnatv.com.br/2022/08/tv-100-caipira.html",
       "stream_url": "https://video10.logicahost.com.br/caipira/caipira/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:48:37.614289+00:00"
+      "last_seen": "2026-11-03T23:00:16.503798+00:00"
     },
     {
       "id": "63a16ff7bb3ac841",
@@ -644,7 +644,7 @@
       "source_page": "https://www.olhosnatv.com.br/2025/02/tv-alianca.html",
       "stream_url": "https://video08.logicahost.com.br/alianca/alianca/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:47:25.664175+00:00"
+      "last_seen": "2026-11-03T22:59:14.981900+00:00"
     },
     {
       "id": "2eca2aea17308611",
@@ -659,7 +659,7 @@
       "source_page": "https://www.olhosnatv.com.br/2018/12/tv-aracati.html",
       "stream_url": "https://video04.logicahost.com.br/tvaracati/tvaracati/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:46:56.612878+00:00"
+      "last_seen": "2026-11-03T22:59:08.381304+00:00"
     },
     {
       "id": "ecee6c8fd620b983",
@@ -675,7 +675,7 @@
       "source_page": "https://www.olhosnatv.com.br/2019/02/tv-brasil-oeste.html",
       "stream_url": "https://5ad482a77183d.streamlock.net/operacaotbomt.com/operacaotbomt.com/chunklist_w635203776.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:48:20.871686+00:00"
+      "last_seen": "2026-11-03T22:59:24.520715+00:00"
     },
     {
       "id": "b55e9ca499ca148c",
@@ -689,7 +689,7 @@
       "source_page": "https://www.olhosnatv.com.br/2018/05/tv-carioca-net.html",
       "stream_url": "https://video03.logicahost.com.br/cariocainternacional1/cariocainternacional1/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:48:17.602304+00:00"
+      "last_seen": "2026-11-03T22:59:23.437775+00:00"
     },
     {
       "id": "5ea44ff92f17a345",
@@ -703,7 +703,7 @@
       "source_page": "https://www.olhosnatv.com.br/2024/08/tv-channel-network.html",
       "stream_url": "https://tvchannel.tvr.ovh/video28392/video28392/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:46:52.459778+00:00"
+      "last_seen": "2026-11-03T22:59:04.761791+00:00"
     },
     {
       "id": "2da9d4a9e1e2041e",
@@ -717,7 +717,7 @@
       "source_page": "https://www.olhosnatv.com.br/2020/01/tv-clube-web.html",
       "stream_url": "https://5c483b9d1019c.streamlock.net/8186/8186/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:48:08.727696+00:00"
+      "last_seen": "2026-11-03T22:59:21.305331+00:00"
     },
     {
       "id": "a13cefda6cb02c75",
@@ -731,7 +731,7 @@
       "source_page": "https://www.olhosnatv.com.br/2021/12/web-tv-classicos-do-cinema.html",
       "stream_url": "https://live20.bozztv.com/giatvplayout7/giatv-208272/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:46:55.993716+00:00"
+      "last_seen": "2026-11-03T22:59:06.112223+00:00"
     },
     {
       "id": "4f4a60741df7af3b",
@@ -746,7 +746,7 @@
       "source_page": "https://www.olhosnatv.com.br/2025/10/tv-difusao.html",
       "stream_url": "https://tvdsite.redesuatv.com.br/tvdsite/tvdsite.stream/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:48:25.775903+00:00"
+      "last_seen": "2026-11-03T22:59:25.800586+00:00"
     },
     {
       "id": "7e57881477597dff",
@@ -761,7 +761,7 @@
       "source_page": "https://www.olhosnatv.com.br/2020/06/tv-goitaca.html",
       "stream_url": "https://video01.brascast.com/david7639/david7639/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:50:08.881175+00:00"
+      "last_seen": "2026-11-03T23:01:32.862606+00:00"
     },
     {
       "id": "919713f83096fea8",
@@ -776,7 +776,7 @@
       "source_page": "https://www.olhosnatv.com.br/2023/04/tv-gru-web.html",
       "stream_url": "https://stmv7.samcast.com.br/rogerio1505/rogerio1505/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:48:12.154624+00:00"
+      "last_seen": "2026-11-03T22:59:24.619287+00:00"
     },
     {
       "id": "08d279773bec3ca8",
@@ -791,7 +791,7 @@
       "source_page": "https://www.olhosnatv.com.br/2026/03/tv-latinasat.html",
       "stream_url": "https://www.latinasat.com.br/hls/live/stream/index.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:47:12.285145+00:00"
+      "last_seen": "2026-11-03T22:59:12.893661+00:00"
     },
     {
       "id": "e2a87f3f3dbf96ad",
@@ -806,7 +806,7 @@
       "source_page": "https://www.olhosnatv.com.br/2018/05/tv-mais-brasil.html",
       "stream_url": "https://stmv8.samcast.com.br/tvmaisbrasil/tvmaisbrasil/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:47:25.046384+00:00"
+      "last_seen": "2026-11-03T22:59:14.137130+00:00"
     },
     {
       "id": "bece65a869011f20",
@@ -822,7 +822,7 @@
       "source_page": "https://www.olhosnatv.com.br/2018/05/tv-marajoara.html",
       "stream_url": "https://tv02.zas.media:1936/tvmarajoara/tvmarajoara/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:48:31.153984+00:00"
+      "last_seen": "2026-11-03T23:00:16.495656+00:00"
     },
     {
       "id": "19a72a2f96be5b30",
@@ -836,7 +836,7 @@
       "source_page": "https://www.olhosnatv.com.br/2022/05/tv-marcheti.html",
       "stream_url": "https://stmv1.samcast.com.br/junior4319/junior4319/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:50:10.605435+00:00"
+      "last_seen": "2026-11-03T23:01:28.893539+00:00"
     },
     {
       "id": "b801a503e7b15ca5",
@@ -850,7 +850,7 @@
       "source_page": "https://www.olhosnatv.com.br/2026/02/tv-miura.html",
       "stream_url": "https://live20.bozztv.com/giatvplayout7/giatv-209397/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:47:24.720979+00:00"
+      "last_seen": "2026-11-03T22:59:14.330530+00:00"
     },
     {
       "id": "5761b3264b0fe881",
@@ -865,7 +865,7 @@
       "source_page": "https://www.olhosnatv.com.br/2018/05/tv-mon.html",
       "stream_url": "https://video10.logicahost.com.br/tvmon/tvmon/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:48:22.893651+00:00"
+      "last_seen": "2026-11-03T22:59:25.011792+00:00"
     },
     {
       "id": "329fcac07ec78c04",
@@ -881,7 +881,7 @@
       "source_page": "https://www.olhosnatv.com.br/2021/04/tv-nbt.html",
       "stream_url": "https://stmv2.srvif.com/nortebrtv/nortebrtv/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:47:12.224613+00:00"
+      "last_seen": "2026-11-03T22:59:13.609549+00:00"
     },
     {
       "id": "ca1af63287fd5f91",
@@ -896,7 +896,7 @@
       "source_page": "https://www.olhosnatv.com.br/2022/08/tv-pompeia.html",
       "stream_url": "https://stmv1.srvif.com/ferrera/ferrera/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:47:34.274333+00:00"
+      "last_seen": "2026-11-03T22:59:14.531528+00:00"
     },
     {
       "id": "b6667c55e104069b",
@@ -911,7 +911,7 @@
       "source_page": "https://www.olhosnatv.com.br/2021/06/tv-potengi.html",
       "stream_url": "https://stmv1.samcast.com.br/jeova3318/jeova3318/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:48:13.157033+00:00"
+      "last_seen": "2026-11-03T22:59:25.370093+00:00"
     },
     {
       "id": "6ec4e50f21f675ef",
@@ -926,7 +926,7 @@
       "source_page": "https://www.olhosnatv.com.br/2025/02/tv-profissao.html",
       "stream_url": "https://cdn.mbcbrasil.tv.br/tvprofissao_web/index.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:49:02.469035+00:00"
+      "last_seen": "2026-11-03T23:01:07.738485+00:00"
     },
     {
       "id": "9724017abe011016",
@@ -941,7 +941,7 @@
       "source_page": "https://www.olhosnatv.com.br/2019/03/tv-santa.html",
       "stream_url": "https://video04.logicahost.com.br/tvsanta/tvsanta/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:46:58.981249+00:00"
+      "last_seen": "2026-11-03T22:59:12.182312+00:00"
     },
     {
       "id": "2f90618f6c183e21",
@@ -954,9 +954,9 @@
       ],
       "logo": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjPPGZG5AZpYH5fdiW8zJLZ3A2tVyZfguzX4HwLnJEoD12vR4U-Zvz8UyhqkFzOG-RE58d980mLn9d1Al4zzDUwb4CAEpor6v3uAtUusWkvKynl3AiaWxBLPpgrPyQDEiy50DwU9vSduSlfTbzRPF_BJIsh_n-9_kPcmv70IBiRA-NVJPRFfH2cauZzZMg/s200/TV%20SONATA.webp",
       "source_page": "https://www.olhosnatv.com.br/2022/05/tv-sonata.html",
-      "stream_url": "https://video04.logicahost.com.br/isonata/isonata/playlist.m3u8",
+      "stream_url": "https://play.tvsonata.com.br/LiveApp/streams/tvsonata.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:46:52.658962+00:00"
+      "last_seen": "2026-11-03T22:59:03.947397+00:00"
     },
     {
       "id": "fd5b98d17b17c01c",
@@ -970,7 +970,7 @@
       "source_page": "https://www.olhosnatv.com.br/2022/07/tv-web-sao-luis-canoas-rs.html",
       "stream_url": "https://stmv1.samcast.com.br/enei9364/enei9364/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:46:57.689549+00:00"
+      "last_seen": "2026-11-03T22:59:11.228633+00:00"
     },
     {
       "id": "9175c60790da5010",
@@ -984,7 +984,7 @@
       "source_page": "https://www.olhosnatv.com.br/2025/02/tvc-ourinhos.html",
       "stream_url": "https://video01.logicahost.com.br/tvcourinhos/tvcourinhos/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:49:07.400965+00:00"
+      "last_seen": "2026-11-03T23:01:16.135490+00:00"
     },
     {
       "id": "0e9ba2bb97a2de09",
@@ -997,7 +997,7 @@
       "source_page": "https://www.olhosnatv.com.br/2025/11/tvnafilmes.html",
       "stream_url": "https://stmv6.voxtvhd.com.br/tvnafilmes/tvnafilmes/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:47:21.682383+00:00"
+      "last_seen": "2026-11-03T22:59:12.941381+00:00"
     },
     {
       "id": "dd7a872fedd22d1d",
@@ -1010,7 +1010,7 @@
       "source_page": "https://www.olhosnatv.com.br/2020/07/vintage-tv.html",
       "stream_url": "https://video01.brascast.com/rogerio7271/rogerio7271/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:48:43.286079+00:00"
+      "last_seen": "2026-11-03T23:00:50.496100+00:00"
     },
     {
       "id": "225ca7651e82216a",
@@ -1024,7 +1024,7 @@
       "source_page": "https://www.olhosnatv.com.br/2018/05/viva-web-tv.html",
       "stream_url": "https://video01.brascast.com/cypriano46326/cypriano46326/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:49:46.516001+00:00"
+      "last_seen": "2026-11-03T23:01:21.611721+00:00"
     },
     {
       "id": "63e42f7d20fc2b3a",
@@ -1038,7 +1038,7 @@
       "source_page": "https://www.olhosnatv.com.br/2025/02/web-canal-blecaute-tv.html",
       "stream_url": "https://stmv2.srvsh.com.br/deivisondaconceicao4233/deivisondaconceicao4233/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:50:18.001782+00:00"
+      "last_seen": "2026-11-03T23:01:34.035125+00:00"
     },
     {
       "id": "9e9b0eb29ca9c008",
@@ -1053,7 +1053,7 @@
       "source_page": "https://www.olhosnatv.com.br/2020/06/web-tv-amparo.html",
       "stream_url": "https://stmv6.voxtvhd.com.br/lupercio5913/lupercio5913/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:47:47.049808+00:00"
+      "last_seen": "2026-11-03T22:59:16.716955+00:00"
     },
     {
       "id": "eaa29b5649626088",
@@ -1067,7 +1067,7 @@
       "source_page": "https://www.olhosnatv.com.br/2025/01/xtreme-tv.html",
       "stream_url": "https://video11.logicahost.com.br/xtremetv/xtremetv/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:46:54.390402+00:00"
+      "last_seen": "2026-11-03T22:59:06.915966+00:00"
     },
     {
       "id": "db66d05ea5c8a8e2",
@@ -1080,7 +1080,7 @@
       "source_page": "https://www.olhosnatv.com.br/2018/05/gospel-cartoon.html",
       "stream_url": "https://stmv1.srvif.com/gospelcartoon/gospelcartoon/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:48:44.682573+00:00"
+      "last_seen": "2026-11-03T23:00:43.614039+00:00"
     },
     {
       "id": "863bae57506566e5",
@@ -1094,7 +1094,7 @@
       "source_page": "https://www.olhosnatv.com.br/2020/06/mi-tv.html",
       "stream_url": "https://stmv4.voxtvhd.com.br/1990/1990/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:48:44.271031+00:00"
+      "last_seen": "2026-11-03T23:00:55.123698+00:00"
     },
     {
       "id": "2d612e707110b4b0",
@@ -1106,7 +1106,7 @@
       "source_page": "https://www.olhosnatv.com.br/2025/10/rede-mundo-tv-sp.html",
       "stream_url": "https://cdn.br10.sbs/memfs/db7562c5-6ba7-47a3-9c0c-ca6cf779ac62.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:48:41.111681+00:00"
+      "last_seen": "2026-11-03T23:00:42.707512+00:00"
     },
     {
       "id": "a388a3a91ea3ad11",
@@ -1120,7 +1120,7 @@
       "source_page": "https://www.olhosnatv.com.br/2018/05/rede-minas.html",
       "stream_url": "https://8hzcavccys.zoeweb.tv/redeminas/ngrp:redeminas_all/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:49:57.638286+00:00"
+      "last_seen": "2026-11-03T23:01:24.813374+00:00"
     },
     {
       "id": "2f7003850d0d4f77",
@@ -1133,7 +1133,7 @@
       "source_page": "https://www.olhosnatv.com.br/2024/07/tv-cultura.html",
       "stream_url": "https://player-tvcultura.stream.uol.com.br/live/tvcultura_lsd.m3u8?vhost=player-tvcultura.stream.uol.com.br",
       "active": true,
-      "last_seen": "2026-11-03T13:46:51.290588+00:00"
+      "last_seen": "2026-11-03T22:59:02.854759+00:00"
     },
     {
       "id": "302eac3ba3604811",
@@ -1145,7 +1145,7 @@
       "source_page": "https://www.olhosnatv.com.br/2025/05/fifa.html",
       "stream_url": "https://c2657533.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UGxleC1icl9GSUZBUGx1c1BvcnR1Z3Vlc2VfSExT/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:49:46.301165+00:00"
+      "last_seen": "2026-11-03T23:01:28.740474+00:00"
     },
     {
       "id": "ed52cdbf32ec39bf",
@@ -1158,7 +1158,7 @@
       "source_page": "https://www.olhosnatv.com.br/2018/05/rede-gospel.html",
       "stream_url": "https://cdn.live.br1.jmvstream.com/w/LVW-8719/LVW8719_AcLVAxWy5J/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:49:49.554328+00:00"
+      "last_seen": "2026-11-03T23:01:25.126333+00:00"
     },
     {
       "id": "73a1f9b4b0a1ace6",
@@ -1171,7 +1171,7 @@
       "source_page": "https://www.olhosnatv.com.br/2018/05/rit-tv.html",
       "stream_url": "https://stream.ecast.com.br/rit-tv/index.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:49:03.427783+00:00"
+      "last_seen": "2026-11-03T23:00:59.773944+00:00"
     },
     {
       "id": "6396df51cded3fa0",
@@ -1183,7 +1183,7 @@
       "source_page": "https://www.olhosnatv.com.br/2025/10/adrenalina-pura-tv.html",
       "stream_url": "https://amg00740-sofa-amg00740c7-tcl-us-7126.playouts.now.amagi.tv/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:48:02.267658+00:00"
+      "last_seen": "2026-11-03T22:59:21.640761+00:00"
     },
     {
       "id": "075bd0c652526ccc",
@@ -1196,7 +1196,7 @@
       "source_page": "https://www.olhosnatv.com.br/2024/07/auge-tv.html",
       "stream_url": "https://video01.logicahost.com.br/canalaugetv/canalaugetv/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:49:55.638572+00:00"
+      "last_seen": "2026-11-03T23:01:29.987388+00:00"
     },
     {
       "id": "3b9ddc66b37de3e9",
@@ -1209,7 +1209,7 @@
       "source_page": "https://www.olhosnatv.com.br/2018/06/gospel-movies-television.html",
       "stream_url": "https://stmv1.srvif.com/gospelf/gospelf/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:49:03.819591+00:00"
+      "last_seen": "2026-11-03T23:01:08.621807+00:00"
     },
     {
       "id": "091e45e3bd555124",
@@ -1222,7 +1222,7 @@
       "source_page": "https://www.olhosnatv.com.br/2022/01/jovem-total-tv.html",
       "stream_url": "https://stmv1.liveplushd.com.br/jovemtotaltv/jovemtotaltv/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:48:25.603194+00:00"
+      "last_seen": "2026-11-03T22:59:27.794746+00:00"
     },
     {
       "id": "10b5688c4b85997c",
@@ -1236,7 +1236,7 @@
       "source_page": "https://www.olhosnatv.com.br/2025/02/mbc-brasil.html",
       "stream_url": "https://cdn.mbcbrasil.tv.br/mbc_web/index.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:47:38.706345+00:00"
+      "last_seen": "2026-11-03T22:59:16.274580+00:00"
     },
     {
       "id": "82e4d0203e979ec6",
@@ -1248,7 +1248,7 @@
       "source_page": "https://www.olhosnatv.com.br/2025/02/mega-one-tv.html",
       "stream_url": "https://stmv6.voxtvhd.com.br/megaonetv/megaonetv/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:47:12.044805+00:00"
+      "last_seen": "2026-11-03T22:59:12.607346+00:00"
     },
     {
       "id": "93ed3aebf20303a7",
@@ -1260,7 +1260,7 @@
       "source_page": "https://www.olhosnatv.com.br/2022/01/moviesphere-brazil.html",
       "stream_url": "https://stream.ads.ottera.tv/playlist.m3u8?network_id=6178",
       "active": true,
-      "last_seen": "2026-11-03T13:47:53.626142+00:00"
+      "last_seen": "2026-11-03T22:59:17.826209+00:00"
     },
     {
       "id": "83c2708150264043",
@@ -1274,7 +1274,7 @@
       "source_page": "https://www.olhosnatv.com.br/2025/02/nbx-tv.html",
       "stream_url": "https://stmv7.voxtvhd.com.br/nbxtv/nbxtv/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:48:16.584262+00:00"
+      "last_seen": "2026-11-03T22:59:22.525101+00:00"
     },
     {
       "id": "3a3f2627fe9b37bf",
@@ -1286,7 +1286,7 @@
       "source_page": "https://www.olhosnatv.com.br/2022/02/runtime.html",
       "stream_url": "https://stream.ads.ottera.tv/playlist.m3u8?network_id=2153",
       "active": true,
-      "last_seen": "2026-11-03T13:48:47.331741+00:00"
+      "last_seen": "2026-11-03T23:01:03.111234+00:00"
     },
     {
       "id": "26b0cf4085ee011d",
@@ -1298,7 +1298,7 @@
       "source_page": "https://www.olhosnatv.com.br/2019/04/runtime-acao.html",
       "stream_url": "https://stream.ads.ottera.tv/playlist.m3u8?network_id=2552",
       "active": true,
-      "last_seen": "2026-11-03T13:47:55.996811+00:00"
+      "last_seen": "2026-11-03T22:59:20.231947+00:00"
     },
     {
       "id": "7c945073a54dd1f6",
@@ -1310,7 +1310,7 @@
       "source_page": "https://www.olhosnatv.com.br/2019/04/runtime-cine-espanto.html",
       "stream_url": "https://stream.ads.ottera.tv/playlist.m3u8?network_id=4865",
       "active": true,
-      "last_seen": "2026-11-03T13:48:43.587256+00:00"
+      "last_seen": "2026-11-03T23:00:54.531362+00:00"
     },
     {
       "id": "a70082130349bb18",
@@ -1322,7 +1322,7 @@
       "source_page": "https://www.olhosnatv.com.br/2019/04/runtime-romance.html",
       "stream_url": "https://stream.ads.ottera.tv/playlist.m3u8?network_id=4866",
       "active": true,
-      "last_seen": "2026-11-03T13:50:02.798094+00:00"
+      "last_seen": "2026-11-03T23:01:29.696894+00:00"
     },
     {
       "id": "d4252b2e4c663085",
@@ -1334,7 +1334,7 @@
       "source_page": "https://www.olhosnatv.com.br/2026/01/sessao-trash.html",
       "stream_url": "https://amg00711-zylo-amg00711c12-plex-us-8636.playouts.now.amagi.tv/playlist1080p.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:48:26.184748+00:00"
+      "last_seen": "2026-11-03T22:59:30.969967+00:00"
     },
     {
       "id": "1e3dadb328ddf0b7",
@@ -1347,7 +1347,7 @@
       "source_page": "https://www.olhosnatv.com.br/2021/12/top-mix-tv-filmes.html",
       "stream_url": "https://video01.logicahost.com.br/topmixtvfilmes/topmixtvfilmes/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:48:38.963433+00:00"
+      "last_seen": "2026-11-03T23:00:42.036023+00:00"
     },
     {
       "id": "4f68ad5624322579",
@@ -1360,7 +1360,7 @@
       "source_page": "https://www.olhosnatv.com.br/2021/07/tv-cidade-brasil.html",
       "stream_url": "https://stmv2.samcast.com.br/tvcidadebrasil/tvcidadebrasil/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:49:47.472045+00:00"
+      "last_seen": "2026-11-03T23:01:23.323559+00:00"
     },
     {
       "id": "5dad0c853c296cac",
@@ -1373,7 +1373,7 @@
       "source_page": "https://www.olhosnatv.com.br/2021/09/tv-cidade-nova.html",
       "stream_url": "https://stmv1.srvif.com/tvcn/tvcn/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:50:04.820386+00:00"
+      "last_seen": "2026-11-03T23:01:35.728237+00:00"
     },
     {
       "id": "13ebdd85728721f6",
@@ -1386,7 +1386,7 @@
       "source_page": "https://www.olhosnatv.com.br/2020/01/tv-diversidade.html",
       "stream_url": "https://cdn.live.br1.jmvstream.com/webtv/AVJ-12928/playlist/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:49:59.156960+00:00"
+      "last_seen": "2026-11-03T23:01:21.430744+00:00"
     },
     {
       "id": "8e2bd79423308a67",
@@ -1400,7 +1400,7 @@
       "source_page": "https://www.olhosnatv.com.br/2022/02/tv-explosao-fm.html",
       "stream_url": "https://srv3.zcast.com.br/edson6164/edson6164/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:48:17.694144+00:00"
+      "last_seen": "2026-11-03T22:59:23.568700+00:00"
     },
     {
       "id": "4ad87a27edd7473f",
@@ -1412,7 +1412,7 @@
       "source_page": "https://www.olhosnatv.com.br/2018/05/tv-jsid.html",
       "stream_url": "https://video05.logicahost.com.br/tvjsid/tvjsid/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:48:40.313646+00:00"
+      "last_seen": "2026-11-03T23:00:42.419656+00:00"
     },
     {
       "id": "0ef35c706da84922",
@@ -1425,7 +1425,7 @@
       "source_page": "https://www.olhosnatv.com.br/2020/01/tv-nbn.html",
       "stream_url": "https://cdn.live.br1.jmvstream.com/w/LVW-8410/LVW8410_uiZOVm6vz1/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:48:04.755211+00:00"
+      "last_seen": "2026-11-03T22:59:19.334177+00:00"
     },
     {
       "id": "94acccfb821b2e3f",
@@ -1440,7 +1440,7 @@
       "source_page": "https://www.olhosnatv.com.br/2020/04/tv-one.html",
       "stream_url": "https://video02.logicahost.com.br/tvone/tvone/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:47:10.044959+00:00"
+      "last_seen": "2026-11-03T22:59:10.117889+00:00"
     },
     {
       "id": "1447de8504eb5e43",
@@ -1453,7 +1453,7 @@
       "source_page": "https://www.olhosnatv.com.br/2025/02/tvs-brasil.html",
       "stream_url": "https://video01.brascast.com/rede1220/rede1220/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:48:33.969326+00:00"
+      "last_seen": "2026-11-03T22:59:28.968334+00:00"
     },
     {
       "id": "32a64a75b7e4394b",
@@ -1466,7 +1466,7 @@
       "source_page": "https://www.olhosnatv.com.br/2026/02/mais-tv-brasil.html",
       "stream_url": "https://v2.cloudecast.com/maistv/index.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:48:29.287766+00:00"
+      "last_seen": "2026-11-03T23:00:15.805759+00:00"
     },
     {
       "id": "2f9b1b17bee9c8c1",
@@ -1479,7 +1479,7 @@
       "source_page": "https://www.olhosnatv.com.br/2019/01/retro-music-television.html",
       "stream_url": "https://newstream.mediawork.cz/retrotv/smil:retrotv_new.smil/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:48:05.105380+00:00"
+      "last_seen": "2026-11-03T22:59:22.781517+00:00"
     },
     {
       "id": "0628cd1f3112f9dc",
@@ -1492,7 +1492,7 @@
       "source_page": "https://www.olhosnatv.com.br/2021/11/tv-litoral-leste.html",
       "stream_url": "https://stmv1.voxtvhd.com.br/tvaracati/tvaracati/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:50:30.595107+00:00"
+      "last_seen": "2026-11-03T23:01:35.971888+00:00"
     },
     {
       "id": "343fc3a37c9d6d7b",
@@ -1506,7 +1506,7 @@
       "source_page": "https://www.olhosnatv.com.br/2018/12/tv-uniao-natal-rn.html",
       "stream_url": "https://pushapp.uniaoplay.com.br/hls/stream.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:50:02.376245+00:00"
+      "last_seen": "2026-11-03T23:01:31.357371+00:00"
     },
     {
       "id": "0c7d514954f1c925",
@@ -1519,7 +1519,7 @@
       "source_page": "https://www.olhosnatv.com.br/2018/05/record-news.html",
       "stream_url": "https://stream.ads.ottera.tv/playlist.m3u8?network_id=5431",
       "active": true,
-      "last_seen": "2026-11-03T13:46:50.921495+00:00"
+      "last_seen": "2026-11-03T23:00:02.723597+00:00"
     },
     {
       "id": "5405e5d3a0acee0c",
@@ -1531,7 +1531,7 @@
       "source_page": "https://www.olhosnatv.com.br/2021/09/tv-jovem-pan-news.html",
       "stream_url": "https://amg01391-amg01391c3-tcl-spain-5038.playouts.now.amagi.tv/playlist720-p.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:50:21.375498+00:00"
+      "last_seen": "2026-11-03T23:01:34.651357+00:00"
     },
     {
       "id": "b8fdea1724bb5462",
@@ -1543,7 +1543,7 @@
       "source_page": "https://www.olhosnatv.com.br/2020/06/spark-tv-luz-e-amor.html",
       "stream_url": "https://candlelightmedia-sparklightlove-3-br.plex.wurl.tv/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:49:59.139363+00:00"
+      "last_seen": "2026-11-03T23:01:28.547069+00:00"
     },
     {
       "id": "897ee6d6dcc5d2b5",
@@ -1556,7 +1556,7 @@
       "source_page": "https://www.olhosnatv.com.br/2018/05/tv-band-pa.html",
       "stream_url": "https://cdn.live.br1.jmvstream.com/w/LVW-15748/LVW15748_Yed7yzLuRC/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:47:25.408542+00:00"
+      "last_seen": "2026-11-03T22:59:14.934779+00:00"
     },
     {
       "id": "17ad7d2e3c0cdd04",
@@ -1569,7 +1569,7 @@
       "source_page": "https://www.olhosnatv.com.br/2018/05/rede-tv-tocantins.html",
       "stream_url": "https://5ad482a77183d.streamlock.net/administrativoredetvto.com.br/administrativoredetvto.com.br/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:46:51.320213+00:00"
+      "last_seen": "2026-11-03T22:59:01.985612+00:00"
     },
     {
       "id": "fecb489d4cc6de57",
@@ -1582,7 +1582,7 @@
       "source_page": "https://www.olhosnatv.com.br/2019/01/tv-a-critica.html",
       "stream_url": "https://cdn.live.br1.jmvstream.com/w/LVW-20715/LVW20715_50E3x2MCm2/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:48:46.842721+00:00"
+      "last_seen": "2026-11-03T23:01:02.793285+00:00"
     },
     {
       "id": "3a197556ba911225",
@@ -1595,7 +1595,7 @@
       "source_page": "https://www.olhosnatv.com.br/2019/09/tv-amplitude-juara-record-mt.html",
       "stream_url": "https://cdn.live.br1.jmvstream.com/w/LVW-10842/LVW10842_513N26MDBL/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:46:50.757178+00:00"
+      "last_seen": "2026-11-03T22:59:01.215062+00:00"
     },
     {
       "id": "4712d0f3a875ab82",
@@ -1608,7 +1608,20 @@
       "source_page": "https://www.olhosnatv.com.br/2019/04/record-tv-mt-tv-amplitude.html",
       "stream_url": "https://cdn.live.br1.jmvstream.com/w/LVW-10841/LVW10841_mT77z9o2cP/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:47:35.633291+00:00"
+      "last_seen": "2026-11-03T22:59:14.874066+00:00"
+    },
+    {
+      "id": "9e16e0b9c2431c44",
+      "name": "TV ARAPUAN (Band PB)",
+      "categories": [
+        "TVs Abertas",
+        "Variedades"
+      ],
+      "logo": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgBKt5lY9oQcx-bvUphyphenhyphen7WjM-s9qHR4ULUoDV0vZEj51m1CNAtVxR6OgqZvEbq1cxBr_pfbmDW23kBlPnOAxm2PpfJEWgKJzeEae0rPkAGBPZWiSnUItE9OQphknX5cpADzaeKRyoPlumahz_Q45ZgILn0yS-d9HA_K0GYAbvm8eBT0jL1e51u3Ilp1WYU/s200/TV%20ARAPUAN.webp",
+      "source_page": "https://www.olhosnatv.com.br/2019/03/band-tv-arapuan-pb.html",
+      "stream_url": "https://5b7f3c45ab7c2.streamlock.net/arapuan/ngrp:arapuan_all/playlist.m3u8",
+      "active": true,
+      "last_seen": "2026-11-03T22:59:18.650213+00:00"
     },
     {
       "id": "3ddcddb3133eed2e",
@@ -1621,7 +1634,7 @@
       "source_page": "https://www.olhosnatv.com.br/2018/05/tv-aratu.html",
       "stream_url": "https://cdn.live.br1.jmvstream.com/w/LVW-9359/LVW9359_XSyReL0QVf/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:47:48.197662+00:00"
+      "last_seen": "2026-11-03T22:59:16.869164+00:00"
     },
     {
       "id": "aa53c8ff221a4354",
@@ -1634,20 +1647,7 @@
       "source_page": "https://www.olhosnatv.com.br/2019/06/tv-brasil-2.html",
       "stream_url": "https://tvbrasil-stream.ebc.com.br/index.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:46:51.890860+00:00"
-    },
-    {
-      "id": "c16db87291ba3609",
-      "name": "TV GAZETA",
-      "categories": [
-        "TVs Abertas",
-        "Variedades"
-      ],
-      "logo": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgN9HayUg7KwsJ_5CxSMrM71Lgon-b5V2LDord0GpYomfsXIpdL8jgBu7xCqA3kMf9vFL4h8aLw9QN3UyHIhNIKU6HFotGwvoPpjHrWdZG8RbMub4Dw1Ug7QAsTSfzdEWVAr3BWRKuicNxlCk1cb6cxShjFKNG4s_UX3vMmGcqwUJemuCZxgq4b2gG_Rdw/w200-h100/TV%20GAZETA.webp",
-      "source_page": "https://www.olhosnatv.com.br/2018/09/tv-gazeta.html",
-      "stream_url": "https://cdndirector.dailymotion.com/cdn/live/video/x9xwtpy.m3u8?sec=dWmnLM31EaBWpSWXvXFZ3SrlZg54fwEVQabifgPlcFj2P_WG8HiP_PIYBghpV4IoUumWKe0IJxy5u4x7LJUn9A",
-      "active": true,
-      "last_seen": "2026-11-03T13:47:53.048220+00:00"
+      "last_seen": "2026-11-03T22:59:01.608435+00:00"
     },
     {
       "id": "cf1d0f5e2530b9ff",
@@ -1660,7 +1660,7 @@
       "source_page": "https://www.olhosnatv.com.br/2026/08/tv-guajara.html",
       "stream_url": "https://video05.logicahost.com.br/tvguajara/tvguajara/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:47:52.831474+00:00"
+      "last_seen": "2026-11-03T22:59:17.617748+00:00"
     },
     {
       "id": "487239f88c3f49ab",
@@ -1673,7 +1673,7 @@
       "source_page": "https://www.olhosnatv.com.br/2019/12/tv-meio-norte.html",
       "stream_url": "https://isaocorp.cloudecast.com/redemeio/index.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:48:46.109163+00:00"
+      "last_seen": "2026-11-03T23:00:56.614233+00:00"
     },
     {
       "id": "32da2dd69c7aee5c",
@@ -1686,7 +1686,7 @@
       "source_page": "https://www.olhosnatv.com.br/2019/01/rede-tv-pi.html",
       "stream_url": "https://6836041ea1117.streamlock.net/tvodia/tvodia/chunklist_w1178400659.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:49:49.363118+00:00"
+      "last_seen": "2026-11-03T23:01:23.170815+00:00"
     },
     {
       "id": "86bdffe595cd4c48",
@@ -1699,7 +1699,7 @@
       "source_page": "https://www.olhosnatv.com.br/2018/05/rede-tv-rs.html",
       "stream_url": "https://video04.logicahost.com.br/tvpampa/tvpampa/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:49:04.998748+00:00"
+      "last_seen": "2026-11-03T23:01:10.211728+00:00"
     },
     {
       "id": "ad5525b1230c3048",
@@ -1712,20 +1712,7 @@
       "source_page": "https://www.olhosnatv.com.br/2026/05/tv-tropical-record-rn.html",
       "stream_url": "https://video07.logicahost.com.br/portaltropicalrn/portaltropicalrn/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:47:11.674835+00:00"
-    },
-    {
-      "id": "c23f8131af881c9d",
-      "name": "TV VALE DO URUARÁ (Band PA)",
-      "categories": [
-        "TVs Abertas",
-        "Variedades"
-      ],
-      "logo": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgdTazBJW1X-im5uLopaosdtDF9o6HNeBstZH1K-1UQal4iYf7IGcm6V1XnJhQ6e70aIa1DXfqgTs1S0IFXQZwnIZgkddCOaZBd6K91VnfHvCYYX0eV23E9d92mqfbBN1WMnwNuAmhGjNa-8YD3Srd1mNzbjUSG9i7xkhWizABXphxANmQQUgKvuiLqhiU/s200/TV%20VALE%20DO%20URUAR%C3%81.webp",
-      "source_page": "https://www.olhosnatv.com.br/2019/12/tv-band-pa-tv-vale-do-uruara.html",
-      "stream_url": "https://stmv8.samcast.com.br/valeradiowebtv/valeradiowebtv/playlist.m3u8",
-      "active": true,
-      "last_seen": "2026-11-03T13:48:35.645352+00:00"
+      "last_seen": "2026-11-03T22:59:13.717080+00:00"
     },
     {
       "id": "9f8e5b5ff7953449",
@@ -1737,7 +1724,7 @@
       "source_page": "https://www.olhosnatv.com.br/2021/01/play-tv.html",
       "stream_url": "https://isaocorp.cloudecast.com/playtv/index.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:49:38.897092+00:00"
+      "last_seen": "2026-11-03T23:01:20.984873+00:00"
     },
     {
       "id": "796148b28d485ef8",
@@ -1749,7 +1736,7 @@
       "source_page": "https://www.olhosnatv.com.br/2019/10/central-tv.html",
       "stream_url": "https://cdn.mbcbrasil.tv.br/rctv_web/index.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:50:23.552991+00:00"
+      "last_seen": "2026-11-03T23:01:34.109329+00:00"
     },
     {
       "id": "aa3739b088670b54",
@@ -1761,7 +1748,7 @@
       "source_page": "https://www.olhosnatv.com.br/2025/02/rede-sdp-tv.html",
       "stream_url": "https://video01.brascast.com/rede8652/rede8652/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:49:00.293367+00:00"
+      "last_seen": "2026-11-03T23:01:07.538067+00:00"
     },
     {
       "id": "6fd00a70410675fb",
@@ -1773,7 +1760,7 @@
       "source_page": "https://www.olhosnatv.com.br/2022/06/rede-virtual-tv.html",
       "stream_url": "https://video03.logicahost.com.br/redevirtualtv/redevirtualtv/chunklist_w757130630.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:48:36.546524+00:00"
+      "last_seen": "2026-11-03T23:00:29.423820+00:00"
     },
     {
       "id": "6e50ead37df9249a",
@@ -1785,7 +1772,19 @@
       "source_page": "https://www.olhosnatv.com.br/2018/05/tv-luzilandia.html",
       "stream_url": "https://cdn-luzilandi-10589.ciclano.io:1443/luzilandi-10589/luzilandi-10589/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:50:25.398029+00:00"
+      "last_seen": "2026-11-03T23:01:35.003284+00:00"
+    },
+    {
+      "id": "beda63e323982fb5",
+      "name": "TV VALE DO URUARÁ",
+      "categories": [
+        "Variedades"
+      ],
+      "logo": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgdTazBJW1X-im5uLopaosdtDF9o6HNeBstZH1K-1UQal4iYf7IGcm6V1XnJhQ6e70aIa1DXfqgTs1S0IFXQZwnIZgkddCOaZBd6K91VnfHvCYYX0eV23E9d92mqfbBN1WMnwNuAmhGjNa-8YD3Srd1mNzbjUSG9i7xkhWizABXphxANmQQUgKvuiLqhiU/s200/TV%20VALE%20DO%20URUAR%C3%81.webp",
+      "source_page": "https://www.olhosnatv.com.br/2026/08/tv-vale-do-uruara.html",
+      "stream_url": "https://stmv8.samcast.com.br/valeradiowebtv/valeradiowebtv/playlist.m3u8",
+      "active": true,
+      "last_seen": "2026-11-03T22:59:30.100036+00:00"
     },
     {
       "id": "34067712fe6f1a1b",
@@ -1797,7 +1796,7 @@
       "source_page": "https://www.olhosnatv.com.br/2019/08/tvm-para.html",
       "stream_url": "https://video09.logicahost.com.br/tvmpara/tvmpara/playlist.m3u8",
       "active": true,
-      "last_seen": "2026-11-03T13:50:12.577014+00:00"
+      "last_seen": "2026-11-03T23:01:30.592381+00:00"
     }
   ]
 }
