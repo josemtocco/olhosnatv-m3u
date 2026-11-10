@@ -14,6 +14,9 @@ https://raw.githubusercontent.com/josemtocco/olhosnatv-m3u/main/categoria-classi
 #EXTINF:0 type="playlist" tvg-name="Desenhos",Desenhos
 #EXTSIZE:medium
 https://raw.githubusercontent.com/josemtocco/olhosnatv-m3u/main/categoria-desenhos.m3u
+#EXTINF:0 type="playlist" tvg-name="Documentários",Documentários
+#EXTSIZE:medium
+https://raw.githubusercontent.com/josemtocco/olhosnatv-m3u/main/categoria-documentarios.m3u
 #EXTINF:0 type="playlist" tvg-name="Educativos",Educativos
 #EXTSIZE:medium
 https://raw.githubusercontent.com/josemtocco/olhosnatv-m3u/main/categoria-educativos.m3u
